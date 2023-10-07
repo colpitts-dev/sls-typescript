@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "target": "es6",
+    "sourceMap": true,
+    "moduleResolution": "node"
+  },
+  "include": ["./tests", "tests/hello.spec.ts"]
+}

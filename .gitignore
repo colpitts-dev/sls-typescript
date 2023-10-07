@@ -1,7 +1,12 @@
 # Node dependencies
 node_modules
+
 # Serverless framework
 .serverless
+
+# Environment variables
+.env
+
 # Ide
 .vscode
 .idea

@@ -1,0 +1,25 @@
+service: serverless-typescript
+useDotenv: true
+package:
+  individually: true
+
+plugins:
+  - serverless-bundle
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: dev
+  region: ca-central-1
+  environment:
+    SECRET_MESSAGE: ${env:SECRET_MESSAGE}
+
+functions:
+  hello:
+    handler: src/handlers/hello.handler
+    events:
+      - http:
+          path: hello
+          method: get

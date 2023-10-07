@@ -2,17 +2,30 @@
   "name": "sls-typescript",
   "version": "0.1.0",
   "description": "Serverless framework TypeScript starter template",
-  "main": "index.js",
   "author": "Adam Colpitts",
   "license": "MIT",
+  "type": "module",
   "scripts": {
-    "test": "serverless-bundle test"
+    "check:types": "tsc --no-emit",
+    "format:fix": "prettier . --write",
+    "test": "serverless-bundle test",
+    "test:watch": "serverless-bundle test --watch",
+    "deploy": "sls deploy --verbose"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.124",
     "@types/jest": "^29.5.5",
+    "aws-lambda": "^1.0.7",
+    "prettier": "^3.0.3",
     "serverless-bundle": "^6.0.0",
     "serverless-dotenv-plugin": "^6.0.0",
-    "serverless-offline": "^13.2.0"
+    "serverless-offline": "^13.2.0",
+    "typescript": "4.4"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "tabWidth": 2,
+    "useTabs": false
   }
 }
